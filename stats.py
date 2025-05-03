@@ -10,8 +10,22 @@ def count_chars(text):
             char_counts[c.lower()] += 1
         else:
             char_counts[c.lower()] = 1
-
-
-
     return char_counts
+
+def sort_list(dict_items):
+    return dict_items["num"]
+
+def chars_list(dict):
+    list = []
+    for char, count in dict.items():
+        list.append({"char": char, "num": count})
+    list.sort(reverse=True, key=sort_list)    
+    return list 
+
+
+
+
+
+
+
     
